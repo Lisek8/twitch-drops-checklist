@@ -1,0 +1,20 @@
+.drop {
+  min-width: 15rem;
+
+  &-name {
+    overflow-wrap: anywhere;
+  }
+
+  &-stream {
+    text-decoration: none;
+  }
+
+  &-online-status {
+    $size: 0.5rem;
+
+    width: $size;
+    height: $size;
+    background-color: lime;
+    border-radius: 50%;
+  }
+}

@@ -1,5 +1,7 @@
 # TwitchDropsChecklist
 
+`http-server -p 8080 -c-1 dist/twitch-drops-checklist/browser`
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.1.
 
 ## Development server

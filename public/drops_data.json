@@ -1,0 +1,29 @@
+{
+  "generic": [
+    {
+      "id": 1,
+      "name": "Rock"
+    },
+    {
+      "id": 2,
+      "name": "Hammer"
+    },
+    {
+      "id": 3,
+      "name": "Armored double door"
+    },
+    {
+      "id": 4,
+      "name": "Large wood box"
+    },
+    {
+      "id": 5,
+      "name": "Garage door"
+    },
+    {
+      "id": 6,
+      "name": "M249"
+    }
+  ],
+  "stream": []
+}

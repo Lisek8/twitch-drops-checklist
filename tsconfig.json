@@ -21,7 +21,18 @@
     "lib": [
       "ES2022",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@models/*": [
+        "./src/models/*"
+      ],
+      "@drops-data": [
+        "./public/drops_data.json"
+      ],
+      "@providers/*": [
+        "./src/app/providers/*"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

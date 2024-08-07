@@ -1,0 +1,55 @@
+<div class="d-flex flex-column row-gap-3">
+  <div class="d-flex gap-2">
+    <button type="button" class="btn btn-primary flex-grow-1" (click)="authTwitch()">Get Twitch Auth</button>
+    <button type="button" class="btn btn-danger flex-grow-1" (click)="clearDropsData()">Clear drops</button>
+  </div>
+
+  @if (genericDrops.length > 0) {
+  <div class="d-flex flex-column row-gap-2">
+    <h2>Generic drops</h2>
+
+    <div class="d-flex flex-column row-gap-2">
+      @for (drop of genericDrops; track $index) {
+      <ng-container [ngTemplateOutlet]="dropTemplate" [ngTemplateOutletContext]="{ $implicit: drop }"></ng-container>
+      }
+    </div>
+  </div>
+  }
+
+  @if (streamerDrops.length > 0) {
+  <div class="d-flex flex-column row-gap-2">
+    <h2>Streamer drops</h2>
+
+    <div class="d-flex flex-column row-gap-2">
+      @for (drop of streamerDrops; track $index) {
+      <ng-container [ngTemplateOutlet]="dropTemplate" [ngTemplateOutletContext]="{ $implicit: drop }"></ng-container>
+      }
+    </div>
+  </div>
+  }
+</div>
+
+<ng-template let-drop #dropTemplate>
+  <div class="drop container-fluid shadow bg-body-secondary rounded py-2 d-flex flex-nowrap column-gap-3" [formGroup]="dropsForm">
+
+    <div class="d-flex flex-column row-gap-1 container-fluid">
+      @if (drop.streams?.length > 0) {
+      <div class="d-flex row-gap-2 column-gap-2">
+        @for (stream of drop.streams; track $index) {
+        <a class="drop-stream badge text-bg-primary d-flex align-items-center column-gap-1" [href]="stream.link">
+
+          <span>{{ stream.name }}</span>
+
+          @if (isStreamOnline(stream.name)) {
+          <div class="drop-online-status"></div>
+          }
+        </a>
+        }
+      </div>
+      }
+      <div class="drop-name flex-grow-1">{{ drop.name }}</div>
+    </div>
+
+    <input class="form-check-input my-auto" type="checkbox" [formControlName]="drop.id">
+  </div>
+</ng-template>
