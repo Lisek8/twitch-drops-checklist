@@ -1,7 +1,9 @@
 <div class="d-flex flex-column row-gap-3">
   <div class="d-flex gap-2">
     <button type="button" class="btn btn-primary flex-grow-1" (click)="authTwitch()">Get Twitch Auth</button>
-    <button type="button" class="btn btn-danger flex-grow-1" (click)="clearDropsData()">Clear drops</button>
+    <button type="button" class="btn btn-danger flex-grow-1" data-bs-toggle="modal" data-bs-target="#clearDropsConfirmationModal">
+      Clear drops
+    </button>
   </div>
 
   @if (genericDrops.length > 0) {
@@ -53,3 +55,24 @@
     <input class="form-check-input my-auto" type="checkbox" [formControlName]="drop.id">
   </div>
 </ng-template>
+
+<!-- Modal -->
+<div class="modal fade" id="clearDropsConfirmationModal" tabindex="-1" aria-labelledby="clearDropsConfirmationModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="clearDropsConfirmationModalLabel">Clear drops</h1>
+      </div>
+
+      <div class="modal-body">
+        Are you sure that you want to clear stored drops data?
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal" (click)="clearDropsData()">Clear</button>
+      </div>
+    </div>
+  </div>
+</div>
