@@ -2,28 +2,115 @@
   "generic": [
     {
       "id": 1,
-      "name": "Rock"
+      "name": "Bolt action rifle"
     },
     {
       "id": 2,
-      "name": "Hammer"
-    },
-    {
-      "id": 3,
-      "name": "Armored double door"
-    },
-    {
-      "id": 4,
-      "name": "Large wood box"
-    },
-    {
-      "id": 5,
       "name": "Garage door"
     },
     {
-      "id": 6,
-      "name": "M249"
+      "id": 3,
+      "name": "Metal facemask"
+    },
+    {
+      "id": 4,
+      "name": "Garage door"
+    },
+    {
+      "id": 5,
+      "name": "Assault rifle"
     }
   ],
-  "stream": []
+  "stream": [
+    {
+      "id": 6,
+      "name": "Jackhammer",
+      "streams": [
+        {
+          "name": "YAKOV",
+          "link": "https://www.twitch.tv/YAKOV"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Hoodie",
+      "streams": [
+        {
+          "name": "ZChum",
+          "link": "https://www.twitch.tv/ZChum"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Thompson",
+      "streams": [
+        {
+          "name": "SnuffyFluffy",
+          "link": "https://www.twitch.tv/SnuffyFluffy"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Waterpipe shotgun",
+      "streams": [
+        {
+          "name": "Oilrats",
+          "link": "https://www.twitch.tv/Oilrats"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Assault rifle",
+      "streams": [
+        {
+          "name": "TORE1005",
+          "link": "https://www.twitch.tv/TORE1005"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "name": "Furnace",
+      "streams": [
+        {
+          "name": "Valair",
+          "link": "https://www.twitch.tv/Valair"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "name": "Rock",
+      "streams": [
+        {
+          "name": "throattwitch",
+          "link": "https://www.twitch.tv/throattwitch"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "name": "Large wood box",
+      "streams": [
+        {
+          "name": "BASETRADETV",
+          "link": "https://www.twitch.tv/BASETRADETV"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "name": "Eoka",
+      "streams": [
+        {
+          "name": "qaixx",
+          "link": "https://www.twitch.tv/qaixx"
+        }
+      ]
+    }
+  ]
 }
