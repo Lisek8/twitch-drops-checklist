@@ -129,9 +129,7 @@ export class DropsListComponent implements OnInit {
   }
 
   isStreamOnline(streamName: string): boolean {
-    streamName = streamName.toLowerCase();
-
-    return !!this.onlineStreamers.find((name) => name.toLowerCase() === streamName);
+    return this.onlineStreamers.includes(streamName.toLowerCase());
   }
 
   authTwitch(): void {
